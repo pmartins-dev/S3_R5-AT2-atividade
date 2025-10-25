@@ -1,0 +1,95 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1757186506900
+  modified: 1757186506900
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_d56be075077a4260ae243470d1fb1e64
+      created: 1759608614320
+      modified: 1759608679505
+      sortKey: -1759608614320
+      description: ""
+  - name: Livros
+    meta:
+      id: fld_b9a220d9e0534c24a3371f603734de9b
+      created: 1761409693445
+      modified: 1761409693445
+      sortKey: -1761409693445
+      description: ""
+    children:
+      - url: localhost:8080/livros
+        name: Listar Livros
+        meta:
+          id: req_17b7a8b3baa74e208de1a5d8cf06ef84
+          created: 1761409712365
+          modified: 1761411390384
+          isPrivate: false
+          description: ""
+          sortKey: -1761409712365
+        method: GET
+        parameters:
+          - id: pair_ddf3c97083984209a225a5e854c05c5e
+            name: titulo
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/livros
+        name: Criar livro
+        meta:
+          id: req_953f703c2c2d4475be537c5fb9dc10b9
+          created: 1761409766989
+          modified: 1761411343664
+          isPrivate: false
+          description: ""
+          sortKey: -1761409766989
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                   "titulo": "Codigo Limpo",
+                   "anoPublicacao": 2009,
+                   "qtdExemplares": 73,
+                   "idAutor": "FB2FB722-8B14-4BC8-899A-BDCB25F62A18"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1759581911452
+    modified: 1759581911452
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1759581911444
+    modified: 1759581911444
+    isPrivate: false

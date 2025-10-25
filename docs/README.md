@@ -1,4 +1,4 @@
-# Documentação da API - Sistema de Livros
+# 🔌 API Reference
 
 ## Livros
 ### GET /livros
@@ -24,9 +24,9 @@
 
 ### POST /livros
 - **Descrição**: Cria um novo livro no sistema
-- **Body (obrigatório)**:
 
 #### Exemplo de criação de um novo livro:
+- #### Body (obrigatório):
 **json**
 ```
 {
@@ -37,14 +37,14 @@
 }
 ```
 
-- **Response (201)**:
+- #### Response (201):
 **json**
 ```
 {
   "message": "Livro cadastrado com sucesso!"
 }
 ```
-- **Error Response (400)**:
+- #### Error Response (400):
 **json**
 ```
 {
@@ -64,31 +64,34 @@ typescript
   idAutor: string          // UUID do autor
 }
 ```
-### Exemplos de Uso
-Buscar todos os livros
-text
-GET /livros
-Buscar livros por título
-text
-GET /livros?titulo=dom
-Cadastrar novo livro
-text
-POST /livros
-Content-Type: application/json
+## Exemplos de Uso
 
+### Buscar todos os livros
+- **GET /livros**
+
+### Buscar livros por título
+- **GET /livros?titulo=dom**
+
+### Cadastrar novo livro
+- **POST /livros**
+
+#### Content-Type: application/json
+```
 {
   "titulo": "Memórias Póstumas de Brás Cubas",
   "anoPublicacao": 1881,
   "qtdExemplares": 8,
   "idAutor": "123e4567-e89b-12d3-a456-426614174000"
 }
-Observações
-Todos os UUIDs devem estar no formato válido
+```
 
-O campo titulo é obrigatório no cadastro
+**Observações**
+- Todos os UUIDs devem estar no formato válido
 
-O campo idAutor é obrigatório no cadastro e deve referenciar um autor existente
+- O campo titulo é obrigatório no cadastro
 
-A busca por título utiliza busca parcial (LIKE %titulo%)
+- O campo idAutor é obrigatório no cadastro e deve referenciar um autor existente
 
-Campos numéricos (anoPublicacao, qtdExemplares) devem ser inteiros
+- A busca por título utiliza busca parcial (LIKE %titulo%)
+
+- Campos numéricos (anoPublicacao, qtdExemplares) devem ser inteiros

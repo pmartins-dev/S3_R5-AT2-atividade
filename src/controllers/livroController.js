@@ -13,8 +13,20 @@ const { livroModel } = require('../models/livroModels');
  */
 
 const livroController = {
-
-    // Função para cadastrar um livro
+    
+    /*Função para cadastrar um livro
+        -----------------------
+        CRIAR UM NOVO LIVRO
+        POST /livros
+        BODY:
+        {
+            "titulo": "nome",
+            "anoPublicacao": 0000,
+            "qtdExemplares": 000,
+            "idAutor": UUID
+        }
+        -----------------------
+    */
     cadastrarLivro: async (req, res) => {
         try {
             // 1. Pegar os dados do livro do corpo da requisição (req.body)

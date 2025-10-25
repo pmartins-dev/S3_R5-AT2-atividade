@@ -8,20 +8,6 @@ const livroModel = {
     // Função que cadastra um livro no banco de dados
     cadastrarLivro: async (titulo, anoPublicacao, qtdExemplares, idAutor) => {
 
-        /*
-        -----------------------
-        CRIAR UM NOVO LIVRO
-        POST /livros
-        BODY:
-        {
-            "titulo": "nome",
-            "anoPublicacao": 0000,
-            "qtdExemplares": 000,
-            "idAutor": UUID
-        }
-        -----------------------
-        */
-
         try {
             const pool = await getConnection();
 
