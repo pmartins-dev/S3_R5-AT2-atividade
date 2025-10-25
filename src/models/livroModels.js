@@ -1,3 +1,5 @@
+//livroRoutes.js
+
 // Importa a função de conexão com o banco
 const { sql, getConnection } = require('../config/db');
 
@@ -58,10 +60,10 @@ const livroModel = {
 
             const pool = await getConnection();
 
-            let querySQL = "SELECT * FROM Livros WHERE titulo = @titulo";
+            let querySQL = "SELECT * FROM Livros WHERE titulo LIKE @titulo";
 
             const result = await pool.request()
-                .input('titulo', sql.VarChar(200), titulo)
+                .input('titulo', sql.VarChar(200), `%${titulo}%`)
                 .query(querySQL);
 
             return result.recordset;
