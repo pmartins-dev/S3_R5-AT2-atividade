@@ -6,7 +6,7 @@ const config = {
     user: 'sa',
     password: '123456789',
     server: 'localhost',
-    database: 'LojaLivrosDB',
+    database: 'biblioteca',
     options: {
         encrypt: false, // Mantenha como false para conexões locais sem SSL
         trustServerCertificate: true // Necessário para conexões locais
